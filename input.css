@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* Calculator Animation */
+@keyframes calculatorPop {
+
+    0%{
+        transform:scale(0.5);
+        opacity:0;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+/* Display Glow */
+
+@keyframes displayGlow{
+
+    0%{
+        box-shadow:0 0 5px #60a5fa;
+    }
+
+    50%{
+        box-shadow:0 0 18px #3b82f6;
+    }
+
+    100%{
+        box-shadow:0 0 5px #60a5fa;
+    }
+
+}
+
+/* Floating Buttons */
+
+@keyframes floatButton{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* Equal Button Pulse */
+
+@keyframes pulseEqual{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* Clear Button Shake */
+
+@keyframes shakeClear{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    25%{
+        transform:translateX(-3px);
+    }
+
+    50%{
+        transform:translateX(3px);
+    }
+
+    75%{
+        transform:translateX(-3px);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+
+}
+
+/* Utility Classes */
+
+.animate-calculator{
+
+    animation:calculatorPop 1s ease;
+
+}
+
+.animate-display{
+
+    animation:displayGlow 2s infinite;
+
+}
+
+.animate-button{
+
+    animation:floatButton 3s ease-in-out infinite;
+
+}
+
+.animate-equal{
+
+    animation:pulseEqual 1.5s infinite;
+
+}
+
+.animate-clear:hover{
+
+    animation:shakeClear .4s;
+
+}
